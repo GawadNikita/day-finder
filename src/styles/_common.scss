@@ -1,0 +1,19 @@
+@import './mixins';
+html,body{ font-size: 13px; font-family: 'Arial'; background: $light_grey; }
+*{box-sizing: border-box;}
+.custom-container { max-width: 85%; margin: 0 auto; }
+.page-wrapper{padding: 40px 20px 30px;}
+label{ @include setFontCSW($dark_grey, 14px, bold); margin: 0 0 10px; display: block;}
+input[type='text'], textarea{ padding: 6px 14px; border-radius: 6px; outline: none; box-shadow: none; border: 1px solid #c4cacc; margin: 0 0 20px; }
+input[type='text']{ height: 40px;}
+button{ 
+  padding: 8px 16px; border-radius: 3px; background: $blue; @include setFontCSW($white, 14px, bold); box-shadow: none; outline: none; border: none; text-transform: uppercase; height: 40px; width: 120px;
+ }
+.grid-template{ display: flex; }
+
+section{
+  .section-title{ @include setFontCSW($dark_grey, 30px, normal); margin: 0 0 36px; text-align: center; }
+}
+@media screen and (min-width: 1200px){
+  .custom-container{ max-width: 1030px;}
+}

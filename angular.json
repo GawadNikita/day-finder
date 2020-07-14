@@ -30,7 +30,9 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "src/scripts/scripts.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -94,7 +96,9 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "src/scripts/scripts.js"
+            ]
           }
         },
         "lint": {
@@ -123,6 +127,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "birthday-date-finder"
+    }
+  },
+  "defaultProject": "birthday-date-finder",
+  "cli": {
+    "analytics": false
+  }
 }

@@ -1,0 +1,31 @@
+
+<div class="custom-container">
+  <section>
+    <h2 class="section-title">Birthday Calendar</h2>
+    <div class="week-days-wrapper grid-template">
+      <div  class="day-wrapper" *ngFor="let day of days">
+        <div class="day-name">{{day.day}}</div>
+        <div>
+          <!-- <div class="initial-wrapper grid-template" [ngStyle]="{'grid-template-columns': ('1fr ').repeat(day.grid)}"> -->
+          <div class="initial-wrapper grid-template">
+            <div [ngStyle]="{'flex-basis': day.grid+'%', 'background' : getRandomColor(), 'height': day.grid +'%' }" class="initial-letters" *ngFor="let name of day.names; let i = index" id="initial-letters-{{i}}"><span>{{name}}</span></div>
+          </div>
+        </div>
+
+        <div *ngIf="day.names.length!=0 " class="count">{{(day.names.length !=0)? day.names.length+" Birthday" + (day.names.length >1?'s' :'' ) : "No Birthdays"}}</div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="grid-template form-wrapper">
+    <textarea id="jsonTextArea" name="" id="" cols="50" rows="20" [(ngModel)]="jsonOutput"></textarea>
+    <form [formGroup]="formUserData" (ngSubmit)="submitForm()">
+      <label for="year">Year</label>
+      <input type="text" formControlName="year" placeholder="Enter valid year" required>
+      <div>
+        <button type="submit">Update</button>
+      </div>
+    </form>
+  </section>
+</div>

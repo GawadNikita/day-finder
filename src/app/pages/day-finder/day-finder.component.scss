@@ -1,0 +1,50 @@
+// @import '../../../styles/mixins';
+// .week-days-wrapper{
+//   grid-template-columns: auto auto auto auto auto auto auto;  grid-column-gap: 5px; margin: 0 0 40px;
+//   .day-wrapper{
+//     width: 150px;
+//     .day-name{ text-transform: uppercase; @include setFontCSW($white, 16px, normal); text-align: right; background: $purple; padding: 5px 10px; }
+//     .initial-wrapper {
+// //       // .grid-3 {
+// //         display: grid; height: 150px; background: $white;
+
+// //       // justify-content: stretch ; align-items: stretch;
+// //       //  overflow-wrap: anywhere; 
+// //       .initial-letters{ 
+// //         @include setFontCSW($white, 14px, bold); text-align: center; padding: 4px;  @include setRandomBackground();
+// //       //   align-self: center;
+// //         >span{
+// //           transform: translate(0%, 0%);
+// //         }
+// //       }
+
+
+
+//       background: $white; height: 150px; display: flex;
+//       .initial-letters{
+
+//       }
+//     }
+//     .count{ @include setFontCSW($dark_grey, 14px, bold); margin: 15px 0;}
+//   }
+// }
+
+
+@import '../../../styles/mixins';
+.week-days-wrapper{
+  margin: 0 0px 40px; flex-wrap: nowrap;
+  .day-wrapper{
+    flex-basis: 14.2857%; margin: 0 5px;
+    .day-name{ text-transform: uppercase; @include setFontCSW($white, 16px, normal); text-align: right; background: $purple; padding: 5px 10px; }
+    .initial-wrapper {
+      background: $white; height: 137px; display: flex; flex-wrap: wrap; align-content: flex-start; align-items: stretch; text-align: center;
+      .initial-letters{  position: relative; }
+      span{
+        @include setFontCSW($white, 16px, normal);position: absolute; bottom: 39%; left: 0; right: 0;
+      }
+    }
+    .count{ @include setFontCSW($dark_grey, 14px, bold); margin: 15px 0;}
+  }
+}
+.form-wrapper{ justify-content: space-between;}
+
