@@ -67,6 +67,7 @@ export class DayFinderComponent implements OnInit {
   }
   clearData = () =>{
     this.hasResults = !this.hasResults;
+    this.formUserData.reset();
     this.days =[
       {day: 'sun', names:[], grid:0 },
       {day: 'mon', names:[], grid:0 },
